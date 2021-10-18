@@ -20,7 +20,7 @@
     "erc721_pic_api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/v1/ersion",
+      "launchUrl": "api/v1/version",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -30,8 +30,8 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/v1/version",
-      "publishAllPorts": true,
-      "useSSL": true
+      "publishAllPorts": false,
+      "useSSL": false
     }
   }
 }

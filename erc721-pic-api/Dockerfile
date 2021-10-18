@@ -2,12 +2,11 @@
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8000
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["erc721-pic-api/erc721-pic-api.csproj", "erc721-pic-api/"]
+COPY ["erc721-pic-api.csproj", "erc721-pic-api/"]
 RUN dotnet restore "erc721-pic-api/erc721-pic-api.csproj"
 COPY . .
 WORKDIR "/src/erc721-pic-api"
