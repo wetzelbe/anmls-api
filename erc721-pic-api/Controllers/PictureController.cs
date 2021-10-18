@@ -23,8 +23,9 @@ namespace erc721_pic_api.Controllers
             {
                 return base.File(ImageHelper.pictureFromGenes(Genes, 1024), "image/jpg");
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return NotFound();
             }
         }
