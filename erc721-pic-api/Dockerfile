@@ -8,8 +8,8 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["erc721-pic-api.csproj", "erc721-pic-api/"]
 RUN dotnet restore "erc721-pic-api/erc721-pic-api.csproj"
-COPY . .
 WORKDIR "/src/erc721-pic-api"
+COPY . .
 RUN dotnet build "erc721-pic-api.csproj" -c Release -o /app/build
 
 FROM build AS publish
