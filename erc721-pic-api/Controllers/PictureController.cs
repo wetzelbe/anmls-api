@@ -30,6 +30,13 @@ namespace erc721_pic_api.Controllers
             }
         }
 
+        [Route("api/v1/metadata/{Genes}")]
+        public IActionResult metadata(string Genes)
+        {
+            string metadata = "{ \"name\": \"ANML\", \"description\":\"\", \"image\":\"http://anmls-test.technology/api/v1/image/" + Genes + "\" }";
+            return base.File(metadata, "application/json");
+        }
+
 
     }
 }
