@@ -34,7 +34,8 @@ namespace erc721_pic_api.Controllers
         public IActionResult metadata(string Genes)
         {
             string metadata = "{ \"name\": \"ANML\", \"description\":\"\", \"image\":\"http://anmls-test.technology/api/v1/image/" + Genes + "\" }";
-            return base.File(metadata, "application/json");
+            FileContentResult result = new FileContentResult(System.Text.Encoding.UTF8.GetBytes(metadata), "application/json");
+            return result;
         }
 
 
